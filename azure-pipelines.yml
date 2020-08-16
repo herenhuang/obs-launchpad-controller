@@ -25,3 +25,7 @@ steps:
     targetPath: '$(Pipeline.Workspace)'
     artifact: 'sdfs'
     publishLocation: 'pipeline'
+- task: PublishSymbols@2
+  inputs:
+    SearchPattern: '**/*.pdb'
+    SymbolServerType: 'TeamServices'
